@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.add_item_page"
+             Title="add_item_page">
+    <VerticalStackLayout Padding="30,0" Spacing="25">
+        <Entry x:Name="name_entry" Placeholder="Ім’я" />
+
+        <Entry x:Name="rate_entry" 
+               Placeholder="Оцінка" 
+               Keyboard="Numeric" />
+
+        <Editor x:Name="description_entry" 
+                Placeholder="Пояснення" 
+                AutoSize="TextChanges" 
+                HeightRequest="100" />
+
+        <Button Text="Зберегти" Clicked="save_button_clicked" />
+
+        <Button Text="Скасувати" Clicked="cancel_button_clicked" />
+    </VerticalStackLayout>
+</ContentPage>
