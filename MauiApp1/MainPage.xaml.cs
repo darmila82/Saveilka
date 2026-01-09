@@ -15,7 +15,7 @@ namespace MauiApp1
             _database = database;
             load_groups();
         }
-        private async void load_groups() // прогружаєм і виводим список
+        private async void load_groups() // прогружаєм і виводим список груп
         {
             GroupsView.ItemsSource = await _database.GetGroupsAsync();
         }
