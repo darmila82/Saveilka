@@ -5,7 +5,7 @@ using Microsoft.Maui.Controls;
 
 namespace MauiApp1
 {
-    public partial class MauiProgram
+    public partial class MauiProgram // на всі ошибки "не существует в текущем контексте" похуй
     {
 
         public static MauiApp CreateMauiApp()
