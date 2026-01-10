@@ -13,7 +13,7 @@ namespace MauiApp1 // на всі ошибки похуй,вони чось са
         public MainPage(Database database) // конструктор,шо непонятно
         {
             InitializeComponent();
-            _database = database;
+            _database = database; 
             load_groups();
 
             groups_list.SelectionChanged += (s, e) => // це шоб можна було "вибрать" групу

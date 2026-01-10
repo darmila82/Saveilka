@@ -30,8 +30,8 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         <HorizontalStackLayout Grid.Row="2" Spacing="10">
-            <Button Text="Відкрити" Clicked="open_group_clicked" HorizontalOptions="FillAndExpand" HorizontalOptions="Start" />
-            <Button Text="Видалити" Clicked="delete_group_clicked" HorizontalOptions="FillAndExpand"  BackgroundColor="IndianRed" HorizontalOptions="End" />
+            <Button Text="Відкрити" Clicked="open_group_clicked" HorizontalOptions="Start" />
+            <Button Text="Видалити" Clicked="delete_group_clicked"  BackgroundColor="IndianRed" HorizontalOptions="End" />
             <Button Text="Додати" Clicked="add_button_clicked" BackgroundColor="LightGreen" HorizontalOptions="Center"/>
         </HorizontalStackLayout>
 
