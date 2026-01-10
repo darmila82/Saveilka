@@ -19,10 +19,12 @@ public partial class ItemsPage : ContentPage
         Title = group.name;
         load_items();
 
+
         items_list.SelectionChanged += (s, e) => // це шоб можна було "вибрать" item 
         {
             _selected_item = e.CurrentSelection.FirstOrDefault() as Items;
         };
+
     }
 
     private async void load_items() // прогружаєм і виводим список items

@@ -24,6 +24,25 @@
                 <DataTemplate>
                     <Frame BackgroundColor="Transparent" Padding="10" Margin="10" 
                            WidthRequest="300" HorizontalOptions="Start" >
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+
+                                <!-- ЗВИЧАЙНИЙ -->
+                                <VisualState Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Transparent" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <!-- ВИБРАНИЙ -->
+                                <VisualState Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="#88000000" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Label Text="{Binding name}" FontSize="18" HorizontalOptions="Center" />
                     </Frame>
                 </DataTemplate>

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Saveilka.ItemsPage"
              Title="Внутрєності"
-             BackgroundImageSource="backbackground.jpg" >
+             BackgroundImageSource="backbackground.jpg" 
+             >
 
     <Grid RowDefinitions="Auto,*,Auto" Padding="20">
 
@@ -20,10 +21,32 @@
         <CollectionView x:Name="items_list" Grid.Row="1" SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
+                    
                     <Frame  Padding="10" Margin="5" HasShadow="False" BackgroundColor="Transparent">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+
+                                <!-- ЗВИЧАЙНИЙ -->
+                                <VisualState Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Transparent" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <!-- ВИБРАНИЙ -->
+                                <VisualState Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="#88000000" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <VerticalStackLayout>
-                            <Label Text="{Binding name}" FontSize="18" />
-                            <Label Text="{Binding rate}" FontSize="16" />
+
+                            <Label Text="{Binding name}" FontSize="18" TextColor="Coral" />
+                            <Label Text="{Binding rate, StringFormat='Оцінка: {0}/10'}"
+                            TextColor="{Binding rate, Converter={StaticResource RateColorConventors}}" FontSize="16" FontAttributes="Bold" />
                             <Label Text="{Binding description}" FontSize="14" />
                         </VerticalStackLayout>
                     </Frame>
