@@ -31,6 +31,26 @@ public partial class ItemsPage : ContentPage
         items_list.ItemsSource = _all_items;
     }
 
+    // Видалити групу
+    private async void delete_item_clicked(object sender, EventArgs e)
+    {
+        if (_selected_item == null)
+        {
+            await DisplayAlert("Помилка", "Будь ласка, оберіть групу зі списку", "OK");
+            return;
+        }
+
+        bool confirm = await DisplayAlert("Підтвердження",
+            $"Видалити групу '{_selected_item.name}'?", "Так", "Ні");
+
+        if (confirm)
+        {
+            await _database.delete_items(_selected_item);
+            _selected_item = null;
+            load_items();
+        }
+    }
+
     private async void add_item_button_clicked(object sender, EventArgs e)
     {
         var name = await DisplayPromptAsync("Новий Item", "Введіть назву");
