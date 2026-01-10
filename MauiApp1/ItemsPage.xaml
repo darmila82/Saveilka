@@ -8,7 +8,7 @@
         <SearchBar x:Name="group_search"
             Grid.Row="0"
             Placeholder="Пошук груп..."
-            TextChanged="search_text_changed" />
+            TextChanged="search_item_changed" />
 
         <CollectionView x:Name="items_list" Grid.Row="1" SelectionMode="Single">
             <CollectionView.ItemTemplate>

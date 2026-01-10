@@ -2,7 +2,7 @@
 using MauiApp1.Models;
 using System.Text.RegularExpressions;
 
-namespace MauiApp1
+namespace MauiApp1 // на всі ошибки похуй,вони чось самі дауни
 
 {
     public partial class MainPage : ContentPage
@@ -10,13 +10,13 @@ namespace MauiApp1
         private readonly Database _database;
         private List<Groups> _allGroups;
         private Groups _selectedGroup;
-        public MainPage(Database database)
+        public MainPage(Database database) // конструктор,шо непонятно
         {
             InitializeComponent();
             _database = database;
             load_groups();
 
-            groups_list.SelectionChanged += (s, e) =>
+            groups_list.SelectionChanged += (s, e) => // це шоб можна було "вибрать" групу
             {
                 _selectedGroup = e.CurrentSelection.FirstOrDefault() as Groups;
             };
@@ -26,7 +26,7 @@ namespace MauiApp1
             _allGroups = await _database.get_groups();
             groups_list.ItemsSource = _allGroups;
         }
-        private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+        private void search_group_changed(object sender, TextChangedEventArgs e) // це поіск
         {
             string filter = e.NewTextValue?.ToLower() ?? "";
 
@@ -36,7 +36,7 @@ namespace MauiApp1
 
             groups_list.ItemsSource = filteredGroups;
         }
-        private async void add_button_clicked(object sender, EventArgs e) // додавання в БД item
+        private async void add_button_clicked(object sender, EventArgs e) // додавання в БД групи
         {
             string name = await DisplayPromptAsync("Нова група", "Введіть назву групи");
             if (!string.IsNullOrWhiteSpace(name))
@@ -46,7 +46,7 @@ namespace MauiApp1
             }
         }
 
-        private async void OnOpenGroupClicked(object sender, EventArgs e)
+        private async void open_group_clicked(object sender, EventArgs e) // открить вибрану групу
         {
             if (_selectedGroup == null)
             {
@@ -56,7 +56,7 @@ namespace MauiApp1
 
             await Navigation.PushAsync(new ItemsPage(_database, _selectedGroup));
         }
-        private async void OnDeleteGroupClicked(object sender, EventArgs e)
+        private async void delete_group_clicked(object sender, EventArgs e) // удалить вибрану групу
         {
             if (_selectedGroup == null)
             {
@@ -79,5 +79,3 @@ namespace MauiApp1
     }
 }
 
-// Переходимо на сторінку з item цієї групи
-//await Navigation.PushAsync(new ItemsPage(_database, group));

@@ -11,7 +11,7 @@ public partial class ItemsPage : ContentPage
     private List<Items> _all_items;
     private Items _selected_item;
 
-    public ItemsPage(Database database, Groups group)
+    public ItemsPage(Database database, Groups group) // конструктор,шо непонятно
     {
         InitializeComponent();
         _database = database;
@@ -19,18 +19,18 @@ public partial class ItemsPage : ContentPage
         Title = group.name;
         load_items();
 
-        items_list.SelectionChanged += (s, e) =>
+        items_list.SelectionChanged += (s, e) => // це шоб можна було "вибрать" item 
         {
             _selected_item = e.CurrentSelection.FirstOrDefault() as Items;
         };
     }
 
-    private async void load_items()
+    private async void load_items() // прогружаєм і виводим список items
     {
        _all_items = await _database.get_items_by_groups(_group.name);
         items_list.ItemsSource = _all_items;
     }
-    private void search_text_changed(object sender, TextChangedEventArgs e)
+    private void search_item_changed(object sender, TextChangedEventArgs e) // це поіск
     {
         string filter = e.NewTextValue?.ToLower() ?? "";
 
@@ -41,8 +41,8 @@ public partial class ItemsPage : ContentPage
         items_list.ItemsSource = filteredGroups;
     }
 
-    private async void delete_item_clicked(object sender, EventArgs e)
-    {
+    private async void delete_item_clicked(object sender, EventArgs e) // удалить вибраний item
+    { 
         if (_selected_item == null)
         {
             await DisplayAlert("Помилка", "Будь ласка, оберіть групу зі списку", "OK");
@@ -50,7 +50,7 @@ public partial class ItemsPage : ContentPage
         }
 
         bool confirm = await DisplayAlert("Підтвердження",
-            $"Видалити групу '{_selected_item.name}'?", "Так", "Ні");
+            $"Видалити '{_selected_item.name}'?", "Так", "Ні");
 
         if (confirm)
         {
@@ -60,9 +60,9 @@ public partial class ItemsPage : ContentPage
         }
     }
 
-    private async void add_item_button_clicked(object sender, EventArgs e)
+    private async void add_item_button_clicked(object sender, EventArgs e) // додавання в БД item
     {
-        var name = await DisplayPromptAsync("Новий Item", "Введіть назву");
+        var name = await DisplayPromptAsync("Новий пріколус", "Введіть назву");
         if (string.IsNullOrWhiteSpace(name))
             return;
 
@@ -70,7 +70,7 @@ public partial class ItemsPage : ContentPage
         if (!int.TryParse(rate_bar, out int rate))
             return;
 
-        var desc = await DisplayPromptAsync("Пояснення", "Введіть пояснення");
+        var desc = await DisplayPromptAsync("Опис,хз,чиркани шот", "Введіть пояснення");
 
         var item = new Items
         {
