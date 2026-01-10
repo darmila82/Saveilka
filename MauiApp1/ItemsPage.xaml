@@ -5,6 +5,10 @@
              Title="ItemsPage">
     <Grid RowDefinitions="Auto,*,Auto" Padding="20">
 
+        <SearchBar x:Name="group_search"
+            Grid.Row="0"
+            Placeholder="Пошук груп..."
+            TextChanged="search_text_changed" />
 
         <CollectionView x:Name="items_list" Grid.Row="1" SelectionMode="Single">
             <CollectionView.ItemTemplate>

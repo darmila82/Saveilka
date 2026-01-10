@@ -30,8 +30,17 @@ public partial class ItemsPage : ContentPage
        _all_items = await _database.get_items_by_groups(_group.name);
         items_list.ItemsSource = _all_items;
     }
+    private void search_text_changed(object sender, TextChangedEventArgs e)
+    {
+        string filter = e.NewTextValue?.ToLower() ?? "";
 
-    // Видалити групу
+        var filteredGroups = _all_items
+            .Where(g => g.name.ToLower().Contains(filter))
+            .ToList();
+
+        items_list.ItemsSource = filteredGroups;
+    }
+
     private async void delete_item_clicked(object sender, EventArgs e)
     {
         if (_selected_item == null)
