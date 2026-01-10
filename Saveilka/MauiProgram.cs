@@ -1,0 +1,34 @@
+﻿using Saveilka.Data;
+using Microsoft.Extensions.Logging;
+
+namespace Saveilka
+{
+    public partial class MauiProgram // на всі ошибки "не существует в текущем контексте" похуй
+    {
+
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            string dbPath = Path.Combine( // тут тіпа привязуєм БД
+                FileSystem.AppDataDirectory,
+                "app.db3");
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
+            builder.Services.AddSingleton( // це шоб на всю прогу тіки 1 БД юзалась
+           new Database(dbPath));
+
+#if DEBUG
+            builder.Logging.AddDebug();
+#endif
+
+            return builder.Build();
+        }
+
+
+    }
+}

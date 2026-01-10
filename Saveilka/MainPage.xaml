@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Saveilka.MainPage"
+             Title="Групи"
+             BackgroundImageSource="background.jpg" >
+
+
+    <Grid RowDefinitions="Auto,*,Auto" Padding="20">
+
+        <SearchBar x:Name="group_search"
+                   Grid.Row="0"
+                   Placeholder="Пошук груп..."
+                   WidthRequest="600"
+                   HeightRequest="50"
+                   HorizontalOptions="Start" 
+                   TextColor="white"      
+                   PlaceholderColor="white"  
+                   TextChanged="search_group_changed" />
+
+
+        <CollectionView x:Name="groups_list" Grid.Row="1" SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="Transparent" Padding="10" Margin="10" 
+                           WidthRequest="300" HorizontalOptions="Start" >
+                        <Label Text="{Binding name}" FontSize="18" HorizontalOptions="Center" />
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <HorizontalStackLayout Grid.Row="2" Spacing="10">
+            <Button Text="Відкрити" Clicked="open_group_clicked" HorizontalOptions="Start" />
+            <Button Text="Видалити" Clicked="delete_group_clicked"  BackgroundColor="IndianRed" HorizontalOptions="End" />
+            <Button Text="Додати" Clicked="add_button_clicked" BackgroundColor="LightGreen" HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+
+    </Grid>
+</ContentPage>
