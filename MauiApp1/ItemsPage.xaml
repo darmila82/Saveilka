@@ -5,9 +5,9 @@
              Title="ItemsPage">
     <VerticalStackLayout>
         <Button Text="Додати item"
-            Clicked="OnAddItemClicked" />
+            Clicked="add_item_button_clicked" />
 
-        <CollectionView x:Name="ItemsView">
+        <CollectionView x:Name="items_list">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame BorderColor="Gray" Padding="10" Margin="5">

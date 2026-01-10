@@ -37,7 +37,7 @@ public partial class add_item_page : ContentPage
         };
 
         // Зберігаємо в БД
-        await _database.SaveItemAsync(item);
+        await _database.save_items(item);
 
         // Закриваємо модальне вікно
         await Navigation.PopModalAsync();

@@ -8,6 +8,8 @@ public partial class ItemsPage : ContentPage
 {
     private readonly Database _database;
     private readonly Groups _group;
+    private List<Items> _all_items;
+    private Items _selected_item;
 
     public ItemsPage(Database database, Groups group)
     {
@@ -15,22 +17,28 @@ public partial class ItemsPage : ContentPage
         _database = database;
         _group = group;
         Title = group.name;
-        LoadItems();
+        load_items();
+
+        items_list.SelectionChanged += (s, e) =>
+        {
+            _selected_item = e.CurrentSelection.FirstOrDefault() as Items;
+        };
     }
 
-    private async void LoadItems()
+    private async void load_items()
     {
-        ItemsView.ItemsSource = await _database.GetItemsByGroupAsync(_group.name);
+       _all_items = await _database.get_items_by_groups(_group.name);
+        items_list.ItemsSource = _all_items;
     }
 
-    private async void OnAddItemClicked(object sender, EventArgs e)
+    private async void add_item_button_clicked(object sender, EventArgs e)
     {
         var name = await DisplayPromptAsync("Новий Item", "Введіть назву");
         if (string.IsNullOrWhiteSpace(name))
             return;
 
-        var scoreStr = await DisplayPromptAsync("Оцінка", "Введіть оцінку");
-        if (!int.TryParse(scoreStr, out int rate))
+        var rate_bar = await DisplayPromptAsync("Оцінка", "Введіть оцінку");
+        if (!int.TryParse(rate_bar, out int rate))
             return;
 
         var desc = await DisplayPromptAsync("Пояснення", "Введіть пояснення");
@@ -43,7 +51,7 @@ public partial class ItemsPage : ContentPage
             type = _group.name
         };
 
-        await _database.SaveItemAsync(item);
-        LoadItems();
+        await _database.save_items(item);
+        load_items();
     }
 }
