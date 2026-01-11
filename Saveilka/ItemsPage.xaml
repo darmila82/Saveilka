@@ -6,8 +6,16 @@
              BackgroundImageSource="backbackground.jpg" 
              >
 
-    <Grid RowDefinitions="Auto,*,Auto" Padding="20">
-
+    <Grid RowDefinitions="Auto,*,Auto" Padding="20" ColumnSpacing="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <!-- Пошук займає весь доступний простір -->
+            <ColumnDefinition Width="Auto" />
+            <!-- Кнопка 1 -->
+            <ColumnDefinition Width="Auto" />
+            <!-- Кнопка 2 -->
+        </Grid.ColumnDefinitions>
+        
         <SearchBar x:Name="group_search"
             Grid.Row="0"
             Placeholder="Пошук груп..."
@@ -16,10 +24,18 @@
             HorizontalOptions="Start" 
             TextColor="white"      
             PlaceholderColor="white"  
-            TextChanged="search_item_changed" />
+            TextChanged="search_item_changed" 
+            Grid.Column="0"/>
+
+
+        
+
+
 
         <CollectionView x:Name="items_list" Grid.Row="1" SelectionMode="Single">
+            
             <CollectionView.ItemTemplate>
+                
                 <DataTemplate>
                     
                     <Frame  Padding="10" Margin="5" HasShadow="False" BackgroundColor="Transparent">
@@ -42,6 +58,7 @@
 
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
+                        
                         <VerticalStackLayout>
 
                             <Label Text="{Binding name}" FontSize="18" TextColor="Coral" />
@@ -49,6 +66,7 @@
                             TextColor="{Binding rate, Converter={StaticResource RateColorConventors}}" FontSize="16" FontAttributes="Bold" />
                             <Label Text="{Binding description}" FontSize="14" />
                         </VerticalStackLayout>
+                        
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

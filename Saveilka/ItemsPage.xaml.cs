@@ -1,5 +1,6 @@
 using Saveilka.Data;
 using Saveilka.Models;
+using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 
 namespace Saveilka;
@@ -9,6 +10,7 @@ public partial class ItemsPage : ContentPage
     private readonly Database _database;
     private readonly Groups _group;
     private List<Items> _all_items;
+    private ObservableCollection<Items> displayed_items;
     private Items _selected_item;
 
     public ItemsPage(Database database, Groups group) // конструктор,шо непонятно
@@ -25,6 +27,8 @@ public partial class ItemsPage : ContentPage
             _selected_item = e.CurrentSelection.FirstOrDefault() as Items;
         };
 
+        displayed_items = new ObservableCollection<Items>(_all_items ?? new List<Items>());
+        items_list.ItemsSource = displayed_items;
     }
 
     private async void load_items() // прогружаєм і виводим список items
@@ -85,4 +89,6 @@ public partial class ItemsPage : ContentPage
         await _database.save_items(item);
         load_items();
     }
+
+
 }
