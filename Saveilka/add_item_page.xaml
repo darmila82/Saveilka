@@ -15,6 +15,14 @@
                 AutoSize="TextChanges" 
                 HeightRequest="100" />
 
+        <Image x:Name="preview_image"
+                   HeightRequest="150"
+                   IsVisible="False"
+                   Aspect="AspectFill"/>
+
+        <Button Text="Обрати фото"
+                    Clicked="pick_image_clicked"/>
+
         <Button Text="Зберегти" Clicked="save_button_clicked" />
 
         <Button Text="Скасувати" Clicked="cancel_button_clicked" />

@@ -1,6 +1,7 @@
 using Saveilka.Data;
 using Saveilka.Models;
 using System.Collections.ObjectModel;
+using Microsoft.Maui.Storage;
 using System.Text.RegularExpressions;
 
 namespace Saveilka;
@@ -9,8 +10,8 @@ public partial class ItemsPage : ContentPage
 {
     private readonly Database _database;
     private readonly Groups _group;
-    private List<Items> _all_items;
-    private ObservableCollection<Items> displayed_items;
+    private List<Items> _all_items = new();
+    private ObservableCollection<Items> displayed_items = new();
     private Items _selected_item;
 
     public ItemsPage(Database database, Groups group) // конструктор,шо непонятно
@@ -22,16 +23,12 @@ public partial class ItemsPage : ContentPage
         load_items();
 
 
-        items_list.SelectionChanged += (s, e) => // це шоб можна було "вибрать" item 
-        {
-            _selected_item = e.CurrentSelection.FirstOrDefault() as Items;
-        };
 
         displayed_items = new ObservableCollection<Items>(_all_items ?? new List<Items>());
         items_list.ItemsSource = displayed_items;
     }
 
-    private async void load_items() // прогружаєм і виводим список items
+    public async void load_items() // прогружаєм і виводим список items
     {
         _all_items = await _database.get_items_by_groups(_group.name);
         items_list.ItemsSource = _all_items;
@@ -66,29 +63,34 @@ public partial class ItemsPage : ContentPage
         }
     }
 
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        load_items();
+    }
     private async void add_item_button_clicked(object sender, EventArgs e) // додавання в БД item
     {
-        var name = await DisplayPromptAsync("Новий пріколус", "Введіть назву");
-        if (string.IsNullOrWhiteSpace(name))
-            return;
-
-        var rate_bar = await DisplayPromptAsync("Оцінка", "Введіть оцінку");
-        if (!float.TryParse(rate_bar, out float rate))
-            return;
-
-        var desc = await DisplayPromptAsync("Опис,хз,чиркани шот", "Введіть пояснення");
-
-        var item = new Items
-        {
-            name = name,
-            rate = rate,
-            description = desc,
-            type = _group.name
-        };
-
-        await _database.save_items(item);
+        await Navigation.PushAsync(new add_item_page(_database, _group));
         load_items();
     }
 
+    private void item_selected(object sender, SelectionChangedEventArgs e)
+    {
+        _selected_item = e.CurrentSelection.FirstOrDefault() as Items;
+
+
+
+        if (_selected_item?.image == null)
+        {
+            selected_image.Source = null;
+            return;
+        }
+
+        selected_image.Source = ImageSource.FromStream(
+            () => new MemoryStream(_selected_item.image)
+        );
+
+
+    }
 
 }

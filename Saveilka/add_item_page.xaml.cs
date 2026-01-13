@@ -1,4 +1,4 @@
-using Saveilka.Data;
+ï»¿using Saveilka.Data;
 using Saveilka.Models;
 
 namespace Saveilka;
@@ -6,46 +6,87 @@ namespace Saveilka;
 public partial class add_item_page : ContentPage
 {
     private readonly Database _database;
+    private readonly Groups _group;
 
-    public add_item_page(Database database)
+    private byte[]? _imageBytes;
+
+
+    public add_item_page(Database database,Groups group)
     {
         InitializeComponent();
         _database = database;
+        _group = group;
+
+
+        Title = $"Ð”Ð¾Ð´Ð°Ñ‚Ð¸ Ð´Ð¾: {group.name}";
+
     }
 
     private async void save_button_clicked(object sender, EventArgs e)
     {
-        // Ïåðåâ³ðêà ââåäåíèõ äàíèõ
+
+        // ÐŸÐµÑ€ÐµÐ²Ñ–Ñ€ÐºÐ° Ð²Ð²ÐµÐ´ÐµÐ½Ð¸Ñ… Ð´Ð°Ð½Ð¸Ñ…
         if (string.IsNullOrWhiteSpace(name_entry.Text))
         {
-            await DisplayAlert("Ïîìèëêà", "²ì’ÿ íå ìîæå áóòè ïîðîæí³ì", "OK");
+            await DisplayAlert("ÐŸÐ¾Ð¼Ð¸Ð»ÐºÐ°", "Ð†Ð¼â€™Ñ Ð½Ðµ Ð¼Ð¾Ð¶Ðµ Ð±ÑƒÑ‚Ð¸ Ð¿Ð¾Ñ€Ð¾Ð¶Ð½Ñ–Ð¼", "OK");
             return;
         }
 
 
         if (!float.TryParse(rate_entry.Text, out float rate))
         {
-            await DisplayAlert("Ïîìèëêà", "Îö³íêà ïîâèííà áóòè ÷èñëîì", "OK");
+            await DisplayAlert("ÐŸÐ¾Ð¼Ð¸Ð»ÐºÐ°", "ÐžÑ†Ñ–Ð½ÐºÐ° Ð¿Ð¾Ð²Ð¸Ð½Ð½Ð° Ð±ÑƒÑ‚Ð¸ Ñ‡Ð¸ÑÐ»Ð¾Ð¼", "OK");
             return;
         }
 
-        // Ñòâîðþºìî íîâèé çàïèñ
+
+
+
+        // Ð¡Ñ‚Ð²Ð¾Ñ€ÑŽÑ”Ð¼Ð¾ Ð½Ð¾Ð²Ð¸Ð¹ Ð·Ð°Ð¿Ð¸Ñ
         var item = new Items
         {
             name = name_entry.Text,
             rate = rate,
-            description = description_entry.Text
+            description = description_entry.Text,
+            type = _group.name,
+            image = _imageBytes
         };
 
-        // Çáåð³ãàºìî â ÁÄ
+
+        // Ð—Ð±ÐµÑ€Ñ–Ð³Ð°Ñ”Ð¼Ð¾ Ð² Ð‘Ð”
         await _database.save_items(item);
 
-        // Çàêðèâàºìî ìîäàëüíå â³êíî
-        await Navigation.PopModalAsync();
+        // Ð—Ð°ÐºÑ€Ð¸Ð²Ð°Ñ”Ð¼Ð¾ Ð¼Ð¾Ð´Ð°Ð»ÑŒÐ½Ðµ Ð²Ñ–ÐºÐ½Ð¾
+        await Navigation.PopAsync();
+
+        
     }
 
     private async void cancel_button_clicked(object sender, EventArgs e)
     {
         await Navigation.PopModalAsync();
+    }
+
+    private async void pick_image_clicked(object sender, EventArgs e)
+    {
+        var result = await FilePicker.Default.PickAsync(
+            new PickOptions
+            {
+                PickerTitle = "ÐžÐ±ÐµÑ€Ñ–Ñ‚ÑŒ Ñ„Ð¾Ñ‚Ð¾",
+                FileTypes = FilePickerFileType.Images
+            });
+
+        if (result == null)
+            return;
+
+        using var stream = await result.OpenReadAsync();
+        using var ms = new MemoryStream();
+
+        await stream.CopyToAsync(ms);
+        _imageBytes = ms.ToArray();
+
+
+        preview_image.Source = ImageSource.FromStream(() => new MemoryStream(_imageBytes));
+        preview_image.IsVisible = true;
     }
 }
