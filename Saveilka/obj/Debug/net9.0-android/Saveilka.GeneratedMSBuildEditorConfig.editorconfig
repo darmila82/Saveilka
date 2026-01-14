@@ -48,6 +48,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Saveilka.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
+[H:/vs code vs/MauiApp1/Saveilka/Redact_item_page.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Saveilka.Redact_item_page.xaml
+build_metadata.AdditionalFiles.TargetPath = Redact_item_page.xaml
+build_metadata.AdditionalFiles.RelativePath = Redact_item_page.xaml
+
 [H:/vs code vs/MauiApp1/Saveilka/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Saveilka.Resources.Styles.Colors.xaml

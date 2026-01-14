@@ -9,14 +9,15 @@ namespace Saveilka.Conventors;
 
 internal class RateColorConventors : IValueConverter
 {
+    //це хуйня,яка міняє цвєт оцінку в залежності від значення
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        if (value == null)
+        if (value == null) //якшо оцінка == null,то вона буде прозрачна
             return Colors.Transparent;
 
         float rate;
 
-        // підтримка float, double, int
+        //підтримка всіх типів чисел
         if (value is float f)
             rate = f;
         else if (value is double d)
@@ -25,6 +26,7 @@ internal class RateColorConventors : IValueConverter
             rate = i;
         else
             return Colors.Transparent;
+
 
         if (rate < 5f)
             return Colors.LightCoral;

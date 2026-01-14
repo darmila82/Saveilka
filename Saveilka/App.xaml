@@ -6,8 +6,10 @@
              x:Class="Saveilka.App">
     <Application.Resources>
         <ResourceDictionary>
+            <!--Це конвертатори,шоб вони могли віздє буть-->
             <conv:RateColorConventors x:Key="RateColorConventors" />
             <conv:ImageConventor x:Key="ImageConventor" />
+            <!---->
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

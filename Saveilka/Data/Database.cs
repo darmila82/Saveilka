@@ -11,7 +11,7 @@ namespace Saveilka.Data
 {
     public class Database
     {
-        private readonly SQLiteAsyncConnection _database; // тут ми создаєм ДБ 1 раз і всьо(readonly)
+        private readonly SQLiteAsyncConnection _database; // тут ми создаєм ДБ 1 раз і всьо
 
         public Database(string dbPath) // це ми або создаєм,або,якщо є,то просто откриваєм БД
         {
@@ -31,7 +31,7 @@ namespace Saveilka.Data
                             .ToListAsync();
         }
 
-        public Task<int> save_groups(Groups group)
+        public Task<int> save_groups(Groups group) //сохраняєм групи в БД
         {
             if (group.id != 0)
                 return _database.UpdateAsync(group);
@@ -42,7 +42,7 @@ namespace Saveilka.Data
         {
             return _database.DeleteAsync(group);
         }
-        public Task<int> save_items(Items item) // це ми создаєм або оновлюєм наш Item
+        public Task<int> save_items(Items item) // це ми создаєм наш Item
                                                 // (хз,як оце все назвать,ячейка данних)
         {
             if (item.id != 0)
@@ -55,5 +55,11 @@ namespace Saveilka.Data
         {
             return _database.DeleteAsync(item);
         }
+
+        public Task<int> update_item(Items item) //а це,шоб редактіровать данні і вони сохранялись
+        {
+            return _database.UpdateAsync(item);
+        }
+
     }
 }

@@ -22,17 +22,16 @@ public partial class add_item_page : ContentPage
 
     }
 
-    private async void save_button_clicked(object sender, EventArgs e)
+    private async void save_button_clicked(object sender, EventArgs e) 
     {
-
-        // Перевірка введених даних
-        if (string.IsNullOrWhiteSpace(name_entry.Text))
+        //шоб було ім
+        if (string.IsNullOrWhiteSpace(name_entry.Text)) 
         {
             await DisplayAlert("Помилка", "Ім’я не може бути порожнім", "OK");
             return;
         }
 
-
+        //шоб була оцінка
         if (!float.TryParse(rate_entry.Text, out float rate))
         {
             await DisplayAlert("Помилка", "Оцінка повинна бути числом", "OK");
@@ -40,9 +39,7 @@ public partial class add_item_page : ContentPage
         }
 
 
-
-
-        // Створюємо новий запис
+        //записуєм item в БД
         var item = new Items
         {
             name = name_entry.Text,
@@ -53,10 +50,10 @@ public partial class add_item_page : ContentPage
         };
 
 
-        // Зберігаємо в БД
+        //зберігаєм в БД
         await _database.save_items(item);
 
-        // Закриваємо модальне вікно
+        //закриваєм модальне вікно
         await Navigation.PopAsync();
 
         

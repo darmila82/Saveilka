@@ -3,13 +3,13 @@
              x:Class="Saveilka.ItemsPage"
              Title="Внутрєності"
              BackgroundImageSource="backbackground.jpg">
-    
+    <!--Тут настраюєм рядки,колонки і оце все-->
     <Grid RowDefinitions="Auto,*,Auto" Padding="20" ColumnSpacing="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        
+        <!--Строка поіска-->
         <SearchBar x:Name="group_search"
             Grid.Row="0"
             Grid.Column="0"
@@ -20,36 +20,41 @@
             TextColor="White"      
             PlaceholderColor="White"  
             TextChanged="search_item_changed" />
+        <!--Лист items-->
         <CollectionView x:Name="items_list" Grid.Row="1" Grid.Column="0" SelectionMode="Single"  SelectionChanged="item_selected">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="10" Margin="5" HasShadow="False" BackgroundColor="Transparent">
                             <VisualStateManager.VisualStateGroups>
+                                <!--Це коли не вибраний item-->
                                 <VisualStateGroup Name="CommonStates">
-                                    <!-- ЗВИЧАЙНИЙ -->
                                     <VisualState Name="Normal">
                                         <VisualState.Setters>
                                             <Setter Property="BackgroundColor" Value="Transparent" />
                                         </VisualState.Setters>
                                     </VisualState>
-                                    <!-- ВИБРАНИЙ -->
+                                    <!--А це вибраний-->
                                     <VisualState Name="Selected">
                                         <VisualState.Setters>
                                             <Setter Property="BackgroundColor" Value="#88000000" />
                                         </VisualState.Setters>
                                     </VisualState>
-                                </VisualStateGroup>
+                                <!---->
+                            </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
                             <VerticalStackLayout>
+                            <!--Це отрісовка кожного item-->
                             <Label Text="{Binding name}" FontSize="18" TextColor="Coral" />
                             <Label Text="{Binding rate, StringFormat='Оцінка: {0}/10'}"
                             TextColor="{Binding rate, Converter={StaticResource RateColorConventors}}" FontSize="16" FontAttributes="Bold" />
                             <Label Text="{Binding description}" FontSize="14" />
+                            <!---->
                         </VerticalStackLayout>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        <!--Це фотка-->
         <Frame Grid.Column="1"
                Grid.Row="1"
                Padding="0"
@@ -61,14 +66,19 @@
             <Image x:Name="selected_image"
                    HeightRequest="600"
                    WidthRequest="400"
-                   BackgroundColor="White"
+                   BackgroundColor="Transparent"
                    Aspect="Fill"
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="FillAndExpand"/>
+
         </Frame>
+        <!---->
         <HorizontalStackLayout Grid.Row="2" Spacing="10">
+            <!--Ну і кнопочки-->
             <Button Text="Додати" Clicked="add_item_button_clicked" BackgroundColor="LightGreen" HorizontalOptions="Start"/>
             <Button Text="Видалити" Clicked="delete_item_clicked" BackgroundColor="IndianRed" HorizontalOptions="End" />
+            <Button Text="Редагувати" Clicked="redact_item_button_clicked" BackgroundColor="DarkCyan" HorizontalOptions="End" />
+            <!---->
         </HorizontalStackLayout>
     </Grid>
 </ContentPage>

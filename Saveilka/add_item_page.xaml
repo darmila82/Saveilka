@@ -4,27 +4,27 @@
              x:Class="Saveilka.add_item_page"
              Title="add_item_page">
     <VerticalStackLayout Padding="30,0" Spacing="25">
+        <!--Тут вводиться імя-->
         <Entry x:Name="name_entry" Placeholder="Ім’я" />
-
+        <!--Тут вводиться оцінка-->
         <Entry x:Name="rate_entry" 
                Placeholder="Оцінка" 
                Keyboard="Numeric" />
-
+        <!--Тут вводиться опис-->
         <Editor x:Name="description_entry" 
                 Placeholder="Пояснення" 
                 AutoSize="TextChanges" 
                 HeightRequest="100" />
-
+        <!--Ну а тут тіпа перегляд фотки,но там хуйня видна,но хай буде-->
         <Image x:Name="preview_image"
                    HeightRequest="150"
                    IsVisible="False"
                    Aspect="AspectFill"/>
-
+        <!--Ну а це вибрать фотку-->
         <Button Text="Обрати фото"
                     Clicked="pick_image_clicked"/>
-
-        <Button Text="Зберегти" Clicked="save_button_clicked" />
-
-        <Button Text="Скасувати" Clicked="cancel_button_clicked" />
+        <!--Кнопочки-->
+        <Button Text="Зберегти" Clicked="save_button_clicked" BackgroundColor="LightGreen"/>
+        <Button Text="Скасувати" Clicked="cancel_button_clicked" BackgroundColor="IndianRed"/>
     </VerticalStackLayout>
 </ContentPage>

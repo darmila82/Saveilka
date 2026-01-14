@@ -7,7 +7,7 @@
 
 
     <Grid RowDefinitions="Auto,*,Auto" Padding="20">
-
+        <!--Це поіск-->
         <SearchBar x:Name="group_search"
                    Grid.Row="0"
                    Placeholder="Пошук груп..."
@@ -17,42 +17,40 @@
                    TextColor="white"      
                    PlaceholderColor="white"  
                    TextChanged="search_group_changed" />
-
-
+        <!---->
         <CollectionView x:Name="groups_list" Grid.Row="1" SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame BackgroundColor="Transparent" Padding="10" Margin="10" 
                            WidthRequest="300" HorizontalOptions="Start" >
                         <VisualStateManager.VisualStateGroups>
+                            <!--Це коли не вибрана група-->
                             <VisualStateGroup Name="CommonStates">
-
-                                <!-- ЗВИЧАЙНИЙ -->
                                 <VisualState Name="Normal">
                                     <VisualState.Setters>
                                         <Setter Property="BackgroundColor" Value="Transparent" />
                                     </VisualState.Setters>
                                 </VisualState>
-
-                                <!-- ВИБРАНИЙ -->
+                                <!--Ну і коли вибрана-->
                                 <VisualState Name="Selected">
                                     <VisualState.Setters>
                                         <Setter Property="BackgroundColor" Value="#88000000" />
                                     </VisualState.Setters>
                                 </VisualState>
-
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
+                        <!--А це отрісовка назв груп-->
                         <Label Text="{Binding name}" FontSize="18" HorizontalOptions="Center" />
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
         <HorizontalStackLayout Grid.Row="2" Spacing="10">
+            <!--Ну і кнопочки-->
             <Button Text="Відкрити" Clicked="open_group_clicked" HorizontalOptions="Start" />
             <Button Text="Видалити" Clicked="delete_group_clicked"  BackgroundColor="IndianRed" HorizontalOptions="End" />
             <Button Text="Додати" Clicked="add_button_clicked" BackgroundColor="LightGreen" HorizontalOptions="Center"/>
+            <!---->
         </HorizontalStackLayout>
-
     </Grid>
 </ContentPage>

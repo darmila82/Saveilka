@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Saveilka.Redact_item_page"
+             Title="Redact_item_page">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="20" RowSpacing="10"
+          ColumnDefinitions="*,auto,auto" ColumnSpacing="5">
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <!--фотка-->
+            <Frame
+        Grid.Row="0"
+        Padding="0"
+        BorderColor="Transparent"
+        BackgroundColor="Transparent"
+        HorizontalOptions="Center"
+        VerticalOptions="Start">
+                <Image Source="niekitiryje.jpg"
+                       Aspect="AspectFit"
+                       WidthRequest="450"
+                       HeightRequest="450"
+                       Grid.Row="0"/>
+            </Frame>
+            <!--Кнопочки-->
+        </VerticalStackLayout>
+        <Button Text="Редагувати фото" Clicked="image_redact_clicked" BackgroundColor="DarkCyan"  Grid.Row="1"/>
+        <Button Text="Редагувати ім'я" Clicked="name_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="2"/>
+        <Button Text="Редагувати оцінку" Clicked="rate_redact_clicked" BackgroundColor="DarkCyan"  Grid.Row="3"/>
+        <Button Text="Редагувати опис" Clicked="desc_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="4"/>
+        <!---->
+    </Grid>
+</ContentPage>

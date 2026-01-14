@@ -13,15 +13,10 @@ namespace Saveilka.Models
         [PrimaryKey, AutoIncrement]
         public int id { get; set; }
         public string name { get; set; }
-        public float rate { get; set; }
-        public string description { get; set; }
-        public string type { get; set; }
-        public byte[]? image { get; set; }
+        public float rate { get; set; } //оцінка
+        public string description { get; set; } //опис
+        public string type { get; set; } //група
+        public byte[]? image { get; set; } //фото
 
-        [Ignore]
-        public Color RateColor =>
-    rate < 5 ? Colors.Red :
-    rate < 8 ? Colors.DarkGoldenrod :
-                Colors.DarkGreen;
     }
 }

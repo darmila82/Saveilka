@@ -24,7 +24,7 @@ public partial class ItemsPage : ContentPage
 
 
 
-        displayed_items = new ObservableCollection<Items>(_all_items ?? new List<Items>());
+        displayed_items = new ObservableCollection<Items>(_all_items ?? new List<Items>()); //це заповнить + отрісовать лист в залежності от групи
         items_list.ItemsSource = displayed_items;
     }
 
@@ -68,13 +68,13 @@ public partial class ItemsPage : ContentPage
         base.OnAppearing();
         load_items();
     }
-    private async void add_item_button_clicked(object sender, EventArgs e) // додавання в БД item
+    private async void add_item_button_clicked(object sender, EventArgs e) //откриваєм окно для додавання item в цю групу
     {
         await Navigation.PushAsync(new add_item_page(_database, _group));
         load_items();
     }
 
-    private void item_selected(object sender, SelectionChangedEventArgs e)
+    private void item_selected(object sender, SelectionChangedEventArgs e) //обработать,який щас вибраний item
     {
         _selected_item = e.CurrentSelection.FirstOrDefault() as Items;
 
@@ -91,6 +91,16 @@ public partial class ItemsPage : ContentPage
         );
 
 
+    }
+
+    private async void redact_item_button_clicked(object sender, EventArgs e) //откриваєм окно для редактірованія
+    {
+        if (_selected_item == null)
+        {
+            await DisplayAlert("Помилка", "Будь ласка, оберіть,що редагувати", "OK");
+            return;
+        }
+        await Navigation.PushAsync(new Redact_item_page(_database, _group,_selected_item));
     }
 
 }
