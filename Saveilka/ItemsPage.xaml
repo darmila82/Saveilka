@@ -16,10 +16,11 @@
             Placeholder="Пошук груп..."
             WidthRequest="918"
             HeightRequest="50"
-            HorizontalOptions="Start" 
+            HorizontalOptions="Start"                       
             TextColor="White"      
             PlaceholderColor="White"  
             TextChanged="search_item_changed" />
+        <Label x:Name="items_counterr" Text="" Grid.Column="1" Grid.Row="0" FontSize="32" TextColor="LightPink" />
         <!--Лист items-->
         <CollectionView x:Name="items_list" Grid.Row="1" Grid.Column="0" SelectionMode="Single"  SelectionChanged="item_selected">
             <CollectionView.ItemTemplate>
@@ -47,6 +48,7 @@
                             <Label Text="{Binding name}" FontSize="18" TextColor="Coral" />
                             <Label Text="{Binding rate, StringFormat='Оцінка: {0}/10'}"
                             TextColor="{Binding rate, Converter={StaticResource RateColorConventors}}" FontSize="16" FontAttributes="Bold" />
+                            <Label Text="{Binding dziedzina}" FontSize="14" TextColor="Cyan"/>
                             <Label Text="{Binding description}" FontSize="14" />
                             <!---->
                         </VerticalStackLayout>

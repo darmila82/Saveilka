@@ -16,6 +16,7 @@ namespace Saveilka.Models
         public float rate { get; set; } //оцінка
         public string description { get; set; } //опис
         public string type { get; set; } //група
+        public string dziedzina { get; set; } //жанр
         public byte[]? image { get; set; } //фото
 
     }

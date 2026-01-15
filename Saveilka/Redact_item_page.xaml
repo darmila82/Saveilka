@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Saveilka.Redact_item_page"
              Title="Redact_item_page">
-    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="20" RowSpacing="10"
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" Padding="20" RowSpacing="10"
           ColumnDefinitions="*,auto,auto" ColumnSpacing="5">
         <VerticalStackLayout Padding="30,0" Spacing="25">
             <!--фотка-->
@@ -25,7 +25,8 @@
         <Button Text="Редагувати фото" Clicked="image_redact_clicked" BackgroundColor="DarkCyan"  Grid.Row="1"/>
         <Button Text="Редагувати ім'я" Clicked="name_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="2"/>
         <Button Text="Редагувати оцінку" Clicked="rate_redact_clicked" BackgroundColor="DarkCyan"  Grid.Row="3"/>
-        <Button Text="Редагувати опис" Clicked="desc_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="4"/>
+        <Button Text="Редагувати опис" Clicked="desc_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="5"/>
+        <Button Text="Редагувати жанр" Clicked="dzied_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="4"/>
         <!---->
     </Grid>
 </ContentPage>

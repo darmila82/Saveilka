@@ -61,5 +61,12 @@ namespace Saveilka.Data
             return _database.UpdateAsync(item);
         }
 
+        public Task<int> items_counter(string group_name)
+        {
+            return _database.Table<Items>()
+                .Where(i => i.type == group_name)
+                .CountAsync();
+        }
+
     }
 }

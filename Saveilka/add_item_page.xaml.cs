@@ -46,6 +46,7 @@ public partial class add_item_page : ContentPage
             rate = rate,
             description = description_entry.Text,
             type = _group.name,
+            dziedzina = dziedzina_entry.Text,
             image = _imageBytes
         };
 

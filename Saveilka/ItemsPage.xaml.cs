@@ -22,8 +22,6 @@ public partial class ItemsPage : ContentPage
         Title = group.name;
         load_items();
 
-
-
         displayed_items = new ObservableCollection<Items>(_all_items ?? new List<Items>()); //це заповнить + отрісовать лист в залежності от групи
         items_list.ItemsSource = displayed_items;
     }
@@ -32,6 +30,8 @@ public partial class ItemsPage : ContentPage
     {
         _all_items = await _database.get_items_by_groups(_group.name);
         items_list.ItemsSource = _all_items;
+        _group.items_count = await _database.items_counter(_group.name);
+        items_counterr.Text = $"{_group.name}({_group.items_count.ToString()})";
     }
     private void search_item_changed(object sender, TextChangedEventArgs e) // це поіск
     {

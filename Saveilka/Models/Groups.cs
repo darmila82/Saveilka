@@ -13,5 +13,8 @@ namespace Saveilka.Models
         public int id { get; set; }
 
         public string name { get; set; } // назва групи
+
+        [Ignore]
+        public int items_count { get; set; }
     }
 }

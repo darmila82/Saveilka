@@ -75,4 +75,16 @@ public partial class Redact_item_page : ContentPage
             await Navigation.PopAsync();
         }
     }
+
+    private async void dzied_redact_clicked(object sender, EventArgs e) //редактіровать жанр
+    {
+        string name = await DisplayPromptAsync("Новий опис", "Введіть новий жанр");
+        if (!string.IsNullOrWhiteSpace(name))
+        {
+            _item.dziedzina = name;
+
+            await _database.update_item(_item);
+            await Navigation.PopAsync();
+        }
+    }
 }

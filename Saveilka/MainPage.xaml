@@ -40,7 +40,7 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <!--А це отрісовка назв груп-->
-                        <Label Text="{Binding name}" FontSize="18" HorizontalOptions="Center" />
+                        <Label Text="{Binding name}" FontSize="18"  HorizontalOptions="Center"/>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

@@ -25,6 +25,10 @@ namespace Saveilka // на всі ошибки похуй,вони чось са
         private async void load_groups() // прогружаєм і виводим список груп
         {
             _allGroups = await _database.get_groups();
+            foreach (var group in _allGroups)
+            {
+                group.items_count = await _database.items_counter(group.name);
+            }
             groups_list.ItemsSource = _allGroups;
         }
         private void search_group_changed(object sender, TextChangedEventArgs e) // це поіск

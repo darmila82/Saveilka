@@ -10,9 +10,14 @@
         <Entry x:Name="rate_entry" 
                Placeholder="Оцінка" 
                Keyboard="Numeric" />
+        <!--Тут вводиться жанр-->
+        <Editor x:Name="dziedzina_entry" 
+                Placeholder="Жанр(по кайфу)" 
+                AutoSize="TextChanges" 
+                HeightRequest="100" />
         <!--Тут вводиться опис-->
         <Editor x:Name="description_entry" 
-                Placeholder="Пояснення" 
+                Placeholder="Пояснення(по кайфу)" 
                 AutoSize="TextChanges" 
                 HeightRequest="100" />
         <!--Ну а тут тіпа перегляд фотки,но там хуйня видна,но хай буде-->
@@ -21,7 +26,7 @@
                    IsVisible="False"
                    Aspect="AspectFill"/>
         <!--Ну а це вибрать фотку-->
-        <Button Text="Обрати фото"
+        <Button Text="Обрати фото(по кайфу)"
                     Clicked="pick_image_clicked"/>
         <!--Кнопочки-->
         <Button Text="Зберегти" Clicked="save_button_clicked" BackgroundColor="LightGreen"/>
