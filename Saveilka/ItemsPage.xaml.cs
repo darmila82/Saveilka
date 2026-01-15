@@ -35,14 +35,20 @@ public partial class ItemsPage : ContentPage
     }
     private void search_item_changed(object sender, TextChangedEventArgs e) // це поіск
     {
-        string filter = e.NewTextValue?.ToLower() ?? "";
+        if (_all_items == null)
+            return;
 
-        var filteredGroups = _all_items
-            .Where(g => g.name.ToLower().Contains(filter))
+        string name_filter = group_search.Text?.ToLower() ?? "";
+        string dzeidzina_filter = dziedzina_item_search.Text?.ToLower() ?? "";
+
+        var filtered_items = _all_items
+            .Where(g => (g.name ?? "").ToLower().Contains(name_filter) && (g.dziedzina ?? "").ToLower().Contains(dzeidzina_filter))
             .ToList();
 
-        items_list.ItemsSource = filteredGroups;
+        items_list.ItemsSource = filtered_items;
     }
+
+
 
     private async void delete_item_clicked(object sender, EventArgs e) // удалить вибраний item
     {
