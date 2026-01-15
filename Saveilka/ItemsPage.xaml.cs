@@ -109,4 +109,30 @@ public partial class ItemsPage : ContentPage
         await Navigation.PushAsync(new Redact_item_page(_database, _group,_selected_item));
     }
 
+
+    private void filter_changed(object sender, EventArgs e)
+    {
+        if (_all_items == null)
+            return;
+
+        string name_filter = group_search.Text?.ToLower() ?? "";
+        string dzeidzina_filter = dziedzina_item_search.Text?.ToLower() ?? "";
+
+
+        var query = _all_items.Where(i =>
+            (i.name ?? "").ToLower().Contains(name_filter) &&
+            (i.dziedzina ?? "").ToLower().Contains(dzeidzina_filter)  
+        );
+
+        query = sortPicker.SelectedIndex switch
+        {
+            0 => query.OrderBy(i => i.name),
+            1 => query.OrderByDescending(i => i.name),
+            2 => query.OrderBy(i => i.rate),
+            3 => query.OrderByDescending(i => i.rate),
+            _ => query
+        };
+
+        items_list.ItemsSource = query.ToList();
+    }
 }

@@ -14,7 +14,7 @@
             Grid.Row="0"
             Grid.Column="0"
             Placeholder="Пошук по назві..."
-            WidthRequest="420"
+            WidthRequest="360"
             HeightRequest="50"
             HorizontalOptions="Start"                       
             TextColor="White"      
@@ -24,13 +24,24 @@
             Grid.Row="0"
             Grid.Column="0"
             Placeholder="Пошук по жанру..."
-            WidthRequest="500"
+            WidthRequest="360"
             HeightRequest="50"
             HorizontalOptions="End"                       
             TextColor="White"      
             PlaceholderColor="White"  
             TextChanged="search_item_changed" />
         <Label x:Name="items_counterr" Text="" Grid.Column="1" Grid.Row="0" FontSize="32" TextColor="LightPink" />
+        <Picker x:Name="sortPicker"
+        Title="Сортувати за"
+        SelectedIndexChanged="filter_changed"
+                Grid.Column="0" HorizontalOptions="Center" TextColor="White" WidthRequest="200" >
+            <Picker.Items>
+                <x:String>Назва (A–Z)</x:String>
+                <x:String>Назва (Z–A)</x:String>
+                <x:String>Оцінка (↑)</x:String>
+                <x:String>Оцінка (↓)</x:String>
+            </Picker.Items>
+        </Picker>
         <!--Лист items-->
         <CollectionView x:Name="items_list" Grid.Row="1" Grid.Column="0" SelectionMode="Single"  SelectionChanged="item_selected">
             <CollectionView.ItemTemplate>
