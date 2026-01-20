@@ -42,6 +42,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Saveilka.ItemsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = ItemsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = ItemsPage.xaml
 
+[H:/vs code vs/MauiApp1/Saveilka/Items_view_page.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Saveilka.Items_view_page.xaml
+build_metadata.AdditionalFiles.TargetPath = Items_view_page.xaml
+build_metadata.AdditionalFiles.RelativePath = Items_view_page.xaml
+
 [H:/vs code vs/MauiApp1/Saveilka/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Saveilka.MainPage.xaml

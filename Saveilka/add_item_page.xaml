@@ -26,8 +26,11 @@
                    IsVisible="False"
                    Aspect="AspectFill"/>
         <!--Ну а це вибрать фотку-->
-        <Button Text="Обрати фото(по кайфу)"
+        <Button Text="Обрати прев'ю(по кайфу)"
                     Clicked="pick_image_clicked"/>
+        <!--Ну а це вибрать фотку-->
+        <Button Text="Обрати фото(по кайфу до 3-х)"
+            Clicked="pick_dop_image_clicked"/>
         <!--Кнопочки-->
         <Button Text="Зберегти" Clicked="save_button_clicked" BackgroundColor="LightGreen"/>
         <Button Text="Скасувати" Clicked="cancel_button_clicked" BackgroundColor="IndianRed"/>

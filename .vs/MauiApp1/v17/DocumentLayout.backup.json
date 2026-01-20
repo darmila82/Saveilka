@@ -3,20 +3,76 @@
   "WorkspaceRootPath": "H:\\vs code vs\\MauiApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\items_view_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\items_view_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\items_view_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\items_view_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\itemspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\itemspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\add_item_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\add_item_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\add_item_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\add_item_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\models\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\models\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\redact_item_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\redact_item_page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\redact_item_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\redact_item_page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\globalxmlns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\globalxmlns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\models\\groups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\models\\groups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\data\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\saveilka.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\saveilka.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\conventors\\ratecolorconventors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\conventors\\ratecolorconventors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|h:\\vs code vs\\mauiapp1\\saveilka\\conventors\\imageconventor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D7F2F18-EA63-428F-9ED0-7E2A18189510}|Saveilka\\Saveilka.csproj|solutionrelative:saveilka\\conventors\\imageconventor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +82,238 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Resources\\Styles\\Styles.xaml",
-              "RelativeDocumentMoniker": "Saveilka\\Resources\\Styles\\Styles.xaml",
-              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Resources\\Styles\\Styles.xaml",
-              "RelativeToolTip": "Saveilka\\Resources\\Styles\\Styles.xaml",
-              "ViewState": "AgIAAKYBAAAAAAAAAAAUwLQBAAB9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-15T15:10:33.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Colors.xaml",
-              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Resources\\Styles\\Colors.xaml",
-              "RelativeDocumentMoniker": "Saveilka\\Resources\\Styles\\Colors.xaml",
-              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Resources\\Styles\\Colors.xaml",
-              "RelativeToolTip": "Saveilka\\Resources\\Styles\\Colors.xaml",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAUwCsAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-15T15:10:24.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ItemsPage.xaml.cs",
-              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\ItemsPage.xaml.cs",
-              "RelativeDocumentMoniker": "Saveilka\\ItemsPage.xaml.cs",
-              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\ItemsPage.xaml.cs",
-              "RelativeToolTip": "Saveilka\\ItemsPage.xaml.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAUwIoAAAAAAAAAAAAAAA==",
+              "Title": "Items_view_page.xaml.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Items_view_page.xaml.cs",
+              "RelativeDocumentMoniker": "Saveilka\\Items_view_page.xaml.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Items_view_page.xaml.cs",
+              "RelativeToolTip": "Saveilka\\Items_view_page.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T12:07:43.827Z",
+              "WhenOpened": "2026-01-20T16:12:20.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Items_view_page.xaml",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Items_view_page.xaml",
+              "RelativeDocumentMoniker": "Saveilka\\Items_view_page.xaml",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Items_view_page.xaml*",
+              "RelativeToolTip": "Saveilka\\Items_view_page.xaml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-20T16:11:14.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemsPage.xaml.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\ItemsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Saveilka\\ItemsPage.xaml.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\ItemsPage.xaml.cs",
+              "RelativeToolTip": "Saveilka\\ItemsPage.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:06:00.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ItemsPage.xaml",
               "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\ItemsPage.xaml",
               "RelativeDocumentMoniker": "Saveilka\\ItemsPage.xaml",
-              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\ItemsPage.xaml*",
-              "RelativeToolTip": "Saveilka\\ItemsPage.xaml*",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAA9AAAAAAAAAA==",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\ItemsPage.xaml",
+              "RelativeToolTip": "Saveilka\\ItemsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-15T12:07:41.566Z",
+              "WhenOpened": "2026-01-20T14:05:58.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "add_item_page.xaml.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\add_item_page.xaml.cs",
+              "RelativeDocumentMoniker": "Saveilka\\add_item_page.xaml.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\add_item_page.xaml.cs",
+              "RelativeToolTip": "Saveilka\\add_item_page.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:06:59.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Redact_item_page.xaml",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Redact_item_page.xaml",
+              "RelativeDocumentMoniker": "Saveilka\\Redact_item_page.xaml",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Redact_item_page.xaml",
+              "RelativeToolTip": "Saveilka\\Redact_item_page.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-20T15:13:28.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Items.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Models\\Items.cs",
+              "RelativeDocumentMoniker": "Saveilka\\Models\\Items.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Models\\Items.cs",
+              "RelativeToolTip": "Saveilka\\Models\\Items.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:06:02.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Saveilka\\MainPage.xaml",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\MainPage.xaml",
+              "RelativeToolTip": "Saveilka\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-20T14:46:33.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "add_item_page.xaml",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\add_item_page.xaml",
+              "RelativeDocumentMoniker": "Saveilka\\add_item_page.xaml",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\add_item_page.xaml",
+              "RelativeToolTip": "Saveilka\\add_item_page.xaml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-20T14:06:56.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Redact_item_page.xaml.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Redact_item_page.xaml.cs",
+              "RelativeDocumentMoniker": "Saveilka\\Redact_item_page.xaml.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Redact_item_page.xaml.cs",
+              "RelativeToolTip": "Saveilka\\Redact_item_page.xaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T15:45:18.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "Saveilka\\MauiProgram.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\MauiProgram.cs",
+              "RelativeToolTip": "Saveilka\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:46:34.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Database.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Data\\Database.cs",
+              "RelativeDocumentMoniker": "Saveilka\\Data\\Database.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Data\\Database.cs",
+              "RelativeToolTip": "Saveilka\\Data\\Database.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:14:43.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Groups.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Models\\Groups.cs",
+              "RelativeDocumentMoniker": "Saveilka\\Models\\Groups.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Models\\Groups.cs",
+              "RelativeToolTip": "Saveilka\\Models\\Groups.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:22:54.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Saveilka.csproj",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Saveilka.csproj",
+              "RelativeDocumentMoniker": "Saveilka\\Saveilka.csproj",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Saveilka.csproj",
+              "RelativeToolTip": "Saveilka\\Saveilka.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-20T15:09:18.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GlobalXmlns.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\GlobalXmlns.cs",
+              "RelativeDocumentMoniker": "Saveilka\\GlobalXmlns.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\GlobalXmlns.cs",
+              "RelativeToolTip": "Saveilka\\GlobalXmlns.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T15:13:24.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RateColorConventors.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Conventors\\RateColorConventors.cs",
+              "RelativeDocumentMoniker": "Saveilka\\Conventors\\RateColorConventors.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Conventors\\RateColorConventors.cs",
+              "RelativeToolTip": "Saveilka\\Conventors\\RateColorConventors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:23:07.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ImageConventor.cs",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\Conventors\\ImageConventor.cs",
+              "RelativeDocumentMoniker": "Saveilka\\Conventors\\ImageConventor.cs",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\Conventors\\ImageConventor.cs",
+              "RelativeToolTip": "Saveilka\\Conventors\\ImageConventor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:23:05.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "App.xaml",
+              "DocumentMoniker": "H:\\vs code vs\\MauiApp1\\Saveilka\\App.xaml",
+              "RelativeDocumentMoniker": "Saveilka\\App.xaml",
+              "ToolTip": "H:\\vs code vs\\MauiApp1\\Saveilka\\App.xaml",
+              "RelativeToolTip": "Saveilka\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-20T14:30:09.715Z",
               "EditorCaption": ""
             }
           ]

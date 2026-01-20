@@ -101,6 +101,7 @@
             <Button Text="Додати" Clicked="add_item_button_clicked" BackgroundColor="LightGreen" HorizontalOptions="Start"/>
             <Button Text="Видалити" Clicked="delete_item_clicked" BackgroundColor="IndianRed" HorizontalOptions="End" />
             <Button Text="Редагувати" Clicked="redact_item_button_clicked" BackgroundColor="DarkCyan" HorizontalOptions="End" />
+            <Button Text="Розгорнути" Clicked="view_item_button_clicked" BackgroundColor="DarkCyan" HorizontalOptions="End" />
             <!---->
         </HorizontalStackLayout>
     </Grid>

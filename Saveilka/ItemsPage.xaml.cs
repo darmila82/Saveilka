@@ -13,6 +13,7 @@ public partial class ItemsPage : ContentPage
     private List<Items> _all_items = new();
     private ObservableCollection<Items> displayed_items = new();
     private Items _selected_item;
+    public ObservableCollection<string> Images { get; set; } = new ObservableCollection<string>();
 
     public ItemsPage(Database database, Groups group) // конструктор,шо непонятно
     {
@@ -134,5 +135,15 @@ public partial class ItemsPage : ContentPage
         };
 
         items_list.ItemsSource = query.ToList();
+    }
+
+    private async void view_item_button_clicked(object sender, EventArgs e) //откриваєм окно для редактірованія
+    {
+        if (_selected_item == null)
+        {
+            await DisplayAlert("Помилка", "Будь ласка, оберіть,що розгортати", "OK");
+            return;
+        }
+        await Navigation.PushAsync(new Items_view_page(_database,_selected_item));
     }
 }

@@ -87,4 +87,58 @@ public partial class Redact_item_page : ContentPage
             await Navigation.PopAsync();
         }
     }
+
+    private async void dop_image_redact_clicked(object sender, EventArgs e) //редакт≥ровать фото
+    {
+        var result1 = await FilePicker.Default.PickAsync(
+    new PickOptions
+    {
+        PickerTitle = "ќбер≥ть фото",
+        FileTypes = FilePickerFileType.Images
+    });
+
+        if (result1 == null)
+            return;
+
+        using var stream1 = await result1.OpenReadAsync();
+        using var ms1 = new MemoryStream();
+
+        await stream1.CopyToAsync(ms1);
+        _item.images1 = ms1.ToArray();
+
+        var result2 = await FilePicker.Default.PickAsync(
+    new PickOptions
+    {
+        PickerTitle = "ќбер≥ть фото",
+        FileTypes = FilePickerFileType.Images
+    });
+
+        if (result2 == null)
+            return;
+
+        using var stream2 = await result2.OpenReadAsync();
+        using var ms2 = new MemoryStream();
+
+        await stream2.CopyToAsync(ms2);
+        _item.images2 = ms2.ToArray();
+
+        var result3 = await FilePicker.Default.PickAsync(
+    new PickOptions
+    {
+        PickerTitle = "ќбер≥ть фото",
+        FileTypes = FilePickerFileType.Images
+    });
+
+        if (result3 == null)
+            return;
+
+        using var stream3 = await result3.OpenReadAsync();
+        using var ms3 = new MemoryStream();
+
+        await stream3.CopyToAsync(ms3);
+        _item.images3 = ms3.ToArray();
+
+        await _database.update_item(_item);
+        await Navigation.PopAsync();
+    }
 }

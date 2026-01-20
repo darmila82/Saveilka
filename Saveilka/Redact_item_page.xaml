@@ -4,29 +4,30 @@
              x:Class="Saveilka.Redact_item_page"
              Title="Redact_item_page">
     <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" Padding="20" RowSpacing="10"
-          ColumnDefinitions="*,auto,auto" ColumnSpacing="5">
-        <VerticalStackLayout Padding="30,0" Spacing="25">
+          ColumnDefinitions="*,auto,auto,*" ColumnSpacing="5">
+        <HorizontalStackLayout Padding="30,0" Spacing="25">
             <!--фотка-->
-            <Frame
-        Grid.Row="0"
-        Padding="0"
-        BorderColor="Transparent"
-        BackgroundColor="Transparent"
-        HorizontalOptions="Center"
-        VerticalOptions="Start">
                 <Image Source="niekitiryje.jpg"
                        Aspect="AspectFit"
                        WidthRequest="450"
                        HeightRequest="450"
-                       Grid.Row="0"/>
-            </Frame>
+                       Grid.Row="0"
+                       Grid.Column="0" />
+            <Image Source="niekitiryje.jpg"
+                       Aspect="AspectFit"
+                       WidthRequest="450"
+                       HeightRequest="450"
+                       Grid.Row="0"
+                       Grid.Column="3" />
+            
             <!--Кнопочки-->
-        </VerticalStackLayout>
-        <Button Text="Редагувати фото" Clicked="image_redact_clicked" BackgroundColor="DarkCyan"  Grid.Row="1"/>
-        <Button Text="Редагувати ім'я" Clicked="name_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="2"/>
-        <Button Text="Редагувати оцінку" Clicked="rate_redact_clicked" BackgroundColor="DarkCyan"  Grid.Row="3"/>
-        <Button Text="Редагувати опис" Clicked="desc_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="5"/>
-        <Button Text="Редагувати жанр" Clicked="dzied_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="4"/>
+        </HorizontalStackLayout>
+        <Button Text="Редагувати фото" Clicked="image_redact_clicked" BackgroundColor="DarkCyan"  Grid.Row="1" Grid.Column="1"/>
+        <Button Text="Редагувати доп фото" Clicked="dop_image_redact_clicked" BackgroundColor="DarkCyan"  Grid.Row="1" Grid.Column="2"/>
+        <Button Text="Редагувати ім'я" Clicked="name_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="1" Grid.Column="0" />
+        <Button Text="Редагувати оцінку" Clicked="rate_redact_clicked" BackgroundColor="DarkCyan"  Grid.Row="1"  Grid.Column="3"/>
+        <Button Text="Редагувати опис" Clicked="desc_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="5"  Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button Text="Редагувати жанр" Clicked="dzied_redact_clicked" BackgroundColor="DarkCyan" Grid.Row="4"  Grid.Column="1" Grid.ColumnSpan="2"/>
         <!---->
     </Grid>
 </ContentPage>

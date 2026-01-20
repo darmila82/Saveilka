@@ -71,6 +71,9 @@
 	  <MauiXaml Update="ItemsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Items_view_page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Redact_item_page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Saveilka")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1781da15b76a70f492605331b09353dc8593f88d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f89eaad11131aac38262b7d782b8d6e9ac3f0813")]
 [assembly: System.Reflection.AssemblyProductAttribute("Saveilka")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Saveilka")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
